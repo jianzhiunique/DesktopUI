@@ -1,0 +1,309 @@
+@CHARSET "UTF-8";
+html{
+	overflow:hidden;
+}
+body{
+	background-image:url(../image/desktop/desktopbg.jpg);
+	background-repeat:no-repeat;
+	font-size:100%;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+    user-select: none;
+}
+.desktop{
+	width:100%;
+	height:100%;
+	font-size:1em;
+}
+.taskbar{
+	width:100%;
+	height:27px;
+	background-color:#696969;
+	filter:alpha(opacity=50);
+	opacity:0.5;
+	font-size:0.9em;
+	color:white;
+	cursor:pointer;
+	
+}
+.main{
+	border:0;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+.start,.timebar{
+	padding:0.5%;
+}
+.start{
+	float:left;
+}
+.timebar{
+	position:relative;
+	float:right;
+	
+}
+.app{
+	margin-left:2px;
+	margin-right:2px;
+	margin-top:10px;
+	text-align:center;
+	cursor:pointer;
+	float:left;
+	width:78px;
+	height:78px;
+	display:inline-block;
+}
+.app,.appicon,.appicon img,.message,.appname
+{
+	z-index:-1;
+}
+.appicon img{
+	width:64px;
+	height:64px;
+}
+.message{
+	position: relative;
+	background-color: red;
+	width: 20px;
+	height: 20px;
+	float: right;
+	top: -70px;
+	color:white;
+	border-radius:50%;
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+.appname{
+	border:1px solid #696969;
+	background-color:#7A7A7A;
+	line-height: 13px;
+	color:white;
+	font-size:13px;
+	display:inline-block;
+	border-radius:5px;
+	cursor:pointer;
+	padding:2px;
+	height:13px;
+	position: relative;
+	left: 10%;
+	bottom: 5%;
+}
+.window{
+	width:800px;
+	height:500px;
+	position:absolute;
+	overflow:hidden;
+	left:50px;
+	top:50px;
+	border-left:1px solid #8D96A1;
+	border-right:1px solid #8D96A1;
+}
+.windowheader,.windowaddress,.windowmain,.windowbottom{
+	width:100%;
+	position:relative;
+}
+.windowheaderleft,.windowheaderright,.windowaddressleft,.windowaddressright,.windowmainleftborder,.windowmainrightborder,.windowbottomleft,.windowbottomright{
+	background-repeat:no-repeat;
+	position:absolute;
+}
+.windowheader{
+	height:25px;
+	background-image:url("../image/desktop/windows/windowheadermiddle.png");
+}
+.windowheaderleft{
+	width:17px;
+	height:25px;
+	background-image:url("../image/desktop/windows/windowheaderleft.png");
+}
+.windowheaderright{
+	width:13px;
+	height:25px;
+	background-image:url("../image/desktop/windows/windowheaderright.png");
+	right:0;
+	top:1px;
+}
+.windowheaderhandle{
+	width: 23px;
+	height: 13px;
+	display: block;
+	z-index: 2;
+	position: absolute;
+	right: 25px;
+	top: 3px;
+	background-image:url("../image/desktop/windows/switch.gif");
+	background-position:0px 27px;
+}
+.windowheaderhandle:hover{
+	background-position:0px 15px;
+}
+.windowaddress{
+	background-image:url("../image/desktop/windows/windowaddressmiddle.png");
+	width:100%;
+	height:31px;
+}
+.windowaddressleft{
+	width:205px;
+	height:31px;
+	background-image:url("../image/desktop/windows/windowaddressleft.png");
+}
+.windowaddressright{
+	width:23px;
+	height:31px;
+	background-image:url("../image/desktop/windows/windowaddressright.png");
+	right: -3px;
+}
+.windowmainlefttop,.windowmainrighttop
+{
+	width:100%;
+	height:18px;
+	
+}
+.windowmainlefttop{
+	background-image:url("../image/desktop/windows/windowmainlefttop.png");
+}
+.windowmainrighttop{
+	background-image:url("../image/desktop/windows/windowmainrighttop.png");
+}
+.windowbottom{
+	background-image:url("../image/desktop/windows/windowbottommiddle.png");
+	width:100%;
+	height:22px;
+}
+.windowbottomleft{
+	width:24px;
+	height:22px;
+	background-image:url("../image/desktop/windows/windowbottomleft.png");
+	left: -1px;
+}
+.windowbottomright{
+	width:25px;
+	height:22px;
+	background-image:url("../image/desktop/windows/windowbottomright.png");
+	right: -2px;
+}
+.windowbottomright:hover{
+	cursor:se-resize;
+}
+.windowmain{
+	width:100%;
+	
+}
+.windowmainleft{
+	width:30%;
+	height:100%;
+	float:left;
+	display:inline-block;
+	background-image:url("../image/desktop/windows/windowmainleft.png");
+}
+.windowmainright{
+	width:70%;
+	height:100%;
+	float:left;
+	display:inline-block;
+	background-image:url("../image/desktop/windows/windowmainright.png");
+}
+iframe{
+	width: 100%;
+}
+.clearboth{
+	clear:both;
+}
+.windowswitch{
+	width:65px;
+	height:25px;
+	position:absolute;
+	left: 6px;
+  	top: 2px;
+}
+.windowswitch div{
+	float:left;
+	width:15px;
+	height:15px;
+	margin:2px;
+	overflow:hidden;
+}
+.close{
+	background-image:url("../image/desktop/windows/switch.gif");
+	background-position:-4px 0;
+}
+.close:hover{
+	cursor:pointer;
+	background-position:-4px -15px;
+}
+.min{
+	background-image:url("../image/desktop/windows/switch.gif");
+	background-position:-4px -30px;
+}
+.min:hover{
+	cursor:pointer;
+	background-position:-4px -45px;
+}
+.max{
+	background-image:url("../image/desktop/windows/switch.gif");
+	background-position:-4px -60px;
+}
+.max:hover{
+	cursor:pointer;
+	background-position:-4px -75px;
+}
+.searchbar
+{
+	position:relative;
+	float:right;
+	
+}
+.searchbox{
+	width:180px;
+	height:21px;
+	border-radius:15px;
+	border:none;
+	outline:none;
+	background-image:url("../image/desktop/windows/hs.gif");
+	background-color: transparent;
+	position: absolute;
+	right:15px;
+}
+.go{
+	background-image:url("../image/desktop/windows/go.gif");
+	position: absolute;
+	border: none;
+	width: 26px;
+	height: 16px;
+	bottom: -20px;
+  	right: 20px;
+	background-color: transparent;
+}
+#windowdemo{
+	display:none;
+}
+#appdemo{
+	display:none;
+}
+.menu{
+	display:none;
+	left:100px;
+	top:200px;
+	border:1px solid #AAAAAA;
+	position:absolute;
+	width:150px;
+	background:white;
+	border-radius:5px;
+	box-shadow: 0px 0px 10px #969696;
+	
+	
+}
+.menu li:hover{
+	background-image:url("../image/desktop/windows/menubg.png");
+	color:white;
+	
+}
+.menu li{
+	height:19px;
+	margin-top:2px;
+	margin-bottom:2px;
+	padding-left:10px;
+	list-style:none;
+}

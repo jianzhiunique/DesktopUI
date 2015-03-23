@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="renjianzhi">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>DesktopUI</title>
+	<link rel="stylesheet" href="./css/cssreset.css" />
+    <!-- jQuery -->
+    <script src="./js/jquery.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="./js/html5shiv.js"></script>
+        <script src="./js/respond.min.js"></script>
+    <![endif]-->
+</head> 
+<script src="./js/desktop.js"></script>
+  <script>
+  
+  $(document).ready(function(){
+	  var app1=new myApp({"appname":"应用","appicon":"store.png","iurl1":"http://www.baidu.com"});
+	  var app2=new myApp({"appname":"音乐","appicon":"music.png","width":"750","height":"600","iurl1":"http://web.kugou.com/","scrolling1":"no"});
+	  var app3=new myApp({"appname":"发布","appicon":"pen.png","iurl1":"__URL__/jstest","iurl2":"http://www.baidu.com","type":2});
+	  var app4=new myApp({"appname":"QQ","appicon":"qq.png","width":"400","height":"600","iurl1":"http://w.qq.com/"});
+	  $(".main").desktopui();
+
+  });
+  </script>
+  <link rel="stylesheet" href="./css/desktop.css" />
+<body>
+<div class="desktop">
+	<div class="taskbar">
+		<div class="start">
+			<span>Start</span>
+		</div>
+		<div class="timebar">
+			<span></span>
+		</div>
+	</div>
+	<div class="main">
+	<div class="cover"></div>
+		<div id="appdemo">
+			<div class="app">
+				<span class="appicon">
+					<img src="./image/desktop/apps/"/>
+				</span>
+				<span class="message"></span>
+				<span class="appname"></span>
+			</div>
+		</div>
+		<div id="windowdemo">
+			<div class="window">
+					<div class="windowheader">
+						<div class="windowheaderleft"></div>
+						<div class="windowheaderright"></div>
+						<div class="windowswitch">
+							<div class="close" onclick="closewindow(this);"></div>
+							<div class="min" onclick="minwindow(this);"></div>
+							<div class="max" onclick="maxwindow(this);"></div>
+						</div>
+					</div>
+					<div class="windowaddress">
+						<div class="windowaddressleft"></div>
+						<div class="windowaddressright"></div>
+						<div class="searchbar">
+						<form action="" method="post">
+							<input class="searchbox" type="text" name="keywords"/>
+							<input class="go" type="submit" value=""/>
+						</form>
+						</div>
+					</div>
+					<div class="windowmain">
+						<iframe src="" frameborder="0"></iframe>
+						<div class="windowmainleft">
+							<div class="windowmainlefttop"></div>
+							<iframe src="" frameborder="0"></iframe>
+						</div>
+						<div class="windowmainright">
+							<div class="windowmainrighttop"></div>
+							<iframe src="" frameborder="0" name="iframe2"></iframe>
+						</div>
+					</div>
+					<div class="clearboth"></div>
+					<div class="windowbottom">
+						<div class="windowbottomleft"></div>
+						<div class="windowbottomright"></div>
+					</div>
+			</div>
+		</div>
+		<div class="menuwrapper">
+		
+		
+		<ul class="menu">
+		<li class="appmenulist" onclick="openapp(this);" appname-data="">启动</li>
+		<li class="desktopmenulist">设置</li>
+		<li class="desktopmenulist" onclick="location.reload();">刷新</li>
+		
+		</ul>
+		
+		</div>
+	</div>
+</div>
+</body> 
+</html>
+
+
+
+
