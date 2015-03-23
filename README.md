@@ -5,5 +5,5 @@ $(document).ready(function(){<br>
 	  new myApp({"appname":"应用名称","appicon":"firstcolumn.png","iurl1":"应用地址"});<br>
 	  $(".main").desktopui();<br>
 	  }<br>
-	  使用它，可以省去后台管理整体架构的时间，专心开发相应的管理功能即可。<br>
+	  使用它，可以省去后台管理整体架构的时间，仅开发相应的管理功能即可。<br>
 	 
